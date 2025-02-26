@@ -14,4 +14,4 @@ if uploaded_file is not None:
     st.write("📝 **Basic File Information:**")
     st.write(df.describe(include="all"))  # Summary statistics
     st.write(f"**Rows:** {df.shape[0]}, **Columns:** {df.shape[1]}")
-    st.write(f"what is the next step");
+    st.write(f"what is the next step?");
