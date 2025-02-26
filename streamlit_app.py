@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+
 
 st.title("📂 CSV File Reader in Streamlit")
 
@@ -15,3 +17,9 @@ if uploaded_file is not None:
     st.write(df.describe(include="all"))  # Summary statistics
     st.write(f"**Rows:** {df.shape[0]}, **Columns:** {df.shape[1]}")
     st.write(f"what is the next step?");
+    
+    # Normalize features
+    scaler = StandardScaler()
+    df[df.columns] = scaler.fit_transform(df)
+    st.dataframe(df)
+
