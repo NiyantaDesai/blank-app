@@ -22,4 +22,5 @@ if uploaded_file is not None:
     scaler = StandardScaler()
     df[df.columns] = scaler.fit_transform(df)
     st.dataframe(df)
+    st.write("Add code to trai this data");
 
